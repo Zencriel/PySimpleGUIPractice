@@ -13,7 +13,7 @@ def newwindow():
         [sg.Text("Email"), sg.InputText(key='-EMAIL-')],
         [sg.Text("Password"), sg.InputText(key='-PASSNEW-')],
         [sg.Text("Confirm Password"), sg.InputText(key='-REPASSNEW-')],
-        [sg.Button("Cancel",expand_x=20),sg.Button("Sign Up",expand_x=20)]
+        [sg.Button("Cancel",expand_x=True),sg.Button("Sign Up",expand_x=True)]
     ]
 
     newwin= sg.Window("Sign Up form", signpage)
@@ -42,7 +42,7 @@ def loginpage():
     rows = c.fetchall()
 
     layout1 = [
-        [sg.Table(values=" ", headings=['Username', 'Password', 'Email'], max_col_width=25,
+        [sg.Table(values="", headings=['Username', 'Password', 'Email'], max_col_width=25,
                   auto_size_columns=True, justification='center', num_rows=5)],
         [sg.Button("Display")]]
 
@@ -72,7 +72,7 @@ def mainwindow():
     layout = [
         [sg.Text("Username"), sg.InputText(key='-USERNAME-')],
         [sg.Text("Password"), sg.InputText(key='-PASSWORD-')],
-        [sg.Button("Login",expand_x=40)],
+        [sg.Button("Login",expand_x=1)],
         [sg.Button("Go to Sign Up", expand_x=20), sg.Button("Cancel",expand_x=20)]
     ]
 
